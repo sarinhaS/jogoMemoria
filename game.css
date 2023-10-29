@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    border: none;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-image: url(fundo.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px 50px;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    background-color: rgba(90, 90, 207, 0.5);
+    font-size: 1.2em;
+    color: white;
+    padding: 30px;
+    margin: 0 0 30px;
+    border-radius: 5px;
+}
+
+
+.grid{
+    display: grid;
+    grid-template-columns:repeat(5,1fr) ;
+    gap: 15px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card {
+    aspect-ratio: 3/4;
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    position: relative;
+    transition: all 400ms ease;
+    transform-style: preserve-3d;
+}
+
+.face{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid rgb(82, 145, 226);
+    transition: all 40ms ease;
+}
+
+.frent{
+    transform: rotateY(180deg);
+   
+}
+
+.back{
+    background-image: url(backim.png);
+    
+    backface-visibility: hidden;
+}
+
+.revelar-carta{
+    transform: rotateY(180deg) ;
+}
+
+.disaparecer-carta{
+    filter: saturate(0);
+    opacity: o.5;
+}
+
+
+
+.login_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+.login_comeco{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.login_comeco img{
+    width: 100px;
+}
+
+.login_input{
+    border: 2px solid #333;
+    border-radius: 8px;
+    color: #333;
+    font-size: 1em;
+    margin-bottom: 15px;
+    max-width: 300px;
+    outline: none;
+    padding: 15px;
+    width: 100%;
+}
+
+
+.login_button{
+    background-color: rgb(68, 68, 224);
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    max-width: 300px;
+    padding: 15px;
+    width: 100%;
+}
+
+.login_button:disabled{
+    background-color: #919191;
+    color: #333;
+    cursor: auto;
+}
