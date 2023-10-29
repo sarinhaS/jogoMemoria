@@ -155,7 +155,6 @@ const loadGame = () => {
         grid.appendChild(card)
     })
     jogo.appendChild(grid)
-    console.log(pontuacao)
     //priplayer.innerHTML = localStorage.getItem('player1')
 }
 
